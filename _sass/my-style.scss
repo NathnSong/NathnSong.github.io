@@ -1,3 +1,8 @@
+/* swipe 안내 아이콘 숨기기 */
+#_swipe {
+  display: none !important;
+}
+
 .dl-table {
   a {
     @supports ((text-decoration-thickness: initial) and (text-underline-offset: initial)) {
