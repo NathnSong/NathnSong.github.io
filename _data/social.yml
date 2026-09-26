@@ -263,4 +263,4 @@ mastodon:
   icon: icon-mastodon
 notion:
   name: Notion
-  icon: icon-notion
+  icon: "icon-notion"
