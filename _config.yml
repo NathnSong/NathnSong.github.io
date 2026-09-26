@@ -46,10 +46,6 @@ author:
 menu:
   - title:             Blog
     url:               /
-  - title:             Documentation
-    url:               /docs/
-  - title:             About
-    url:               /about/
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
@@ -308,6 +304,8 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - functions
+  - docs
+  - example
 include:
   - _routes.json
   - .well-known
