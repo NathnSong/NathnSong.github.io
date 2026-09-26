@@ -3,12 +3,23 @@
     @supports ((text-decoration-thickness: initial) and (text-underline-offset: initial)) {
       text-underline-offset: .8rem;
     }
+
     @supports not ((text-decoration-thickness: initial) and (text-underline-offset: initial)) {
       padding-bottom: .45rem;
     }
   }
 
-  .btn, .gumroad-button  {
+  .btn,
+  .gumroad-button {
     margin: 1rem 0;
+  }
+
+  /* sidebar profile logo image -> rounding*/
+  .sidebar-item .site-title img,
+  .sidebar-logo img,
+  img.logo {
+    border-radius: 50% !important;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
   }
 }

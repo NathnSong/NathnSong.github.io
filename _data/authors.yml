@@ -27,7 +27,7 @@ author1:
   # Rearrange to change the order in which they appear
   # You can also provide an absolute URL (starting with https://) instead of usernames
   social:
-    twitter:         <username>
+    #twitter:         <username>
     github:          <username>
     # email:           <mail@domain.tld>
     # rss:             https://<url>/feed.xml
@@ -80,6 +80,7 @@ author1:
     # discord:         <invite-code>
     # mastodon:        https://<url>
     # x:               <username>
+    # notion:         https://<url>
 
 # Another author (optional)
 author2:
@@ -93,5 +94,6 @@ author2:
     Open `_data/authors.yml` to edit this text.
 
   picture:           https://placehold.it/128x128
-  twitter:           <username>
+  #twitter:           <username>
   github:            <username>
+  # notion:         https://<url>

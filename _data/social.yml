@@ -261,3 +261,6 @@ discord:
 mastodon:
   name: Mastodon
   icon: icon-mastodon
+notion:
+  name: Notion
+  icon: icon-notion
