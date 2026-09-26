@@ -31,7 +31,14 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.2'
-          bundler-cache: true
+          bundler-cache: false # 캐시로 인한 충돌 방지
+          
+      # 리눅스 플랫폼과 패키지를 동기화
+      - name: Add linux platform to Lockfile
+        run: |
+          bundle config set --local frozen false
+          bundle lock --add-platform x86_64-linux
+          bundle install
 
       - name: Setup Pages
         id: pages
