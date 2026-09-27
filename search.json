@@ -1,0 +1,35 @@
+---
+layout: null
+---
+[
+  {%- assign first = true -%}
+  {%- for post in site.posts -%}
+    {%- unless post.sitemap == false -%}
+      {%- unless first -%},{%- endunless -%}
+      {%- assign first = false -%}
+      {
+        "title": {{ post.title | jsonify }},
+        "category": {{ post.categories | join: ", " | jsonify }},
+        "tags": {{ post.tags | join: ", " | jsonify }},
+        "url": {{ post.url | relative_url | jsonify }},
+        "date": {{ post.date | date: "%Y-%m-%d" | jsonify }},
+        "content": {{ post.content | strip_html | normalize_whitespace | truncate: 5000 | jsonify }}
+      }
+    {%- endunless -%}
+  {%- endfor -%}
+  {%- for page in site.pages -%}
+    {%- if page.title and page.sitemap != false and page.url != "/search.json" and page.url != "/search/" and page.url != "/404.html" and page.url != "/404" -%}
+      {%- if page.url contains "/licenses/" or page.url contains "/assets/" %}{% continue %}{% endif -%}
+      {%- unless first -%},{%- endunless -%}
+      {%- assign first = false -%}
+      {
+        "title": {{ page.title | jsonify }},
+        "category": {{ page.categories | join: ", " | jsonify }},
+        "tags": {{ page.tags | join: ", " | jsonify }},
+        "url": {{ page.url | relative_url | jsonify }},
+        "date": "",
+        "content": {{ page.content | strip_html | normalize_whitespace | truncate: 3000 | jsonify }}
+      }
+    {%- endif -%}
+  {%- endfor -%}
+]

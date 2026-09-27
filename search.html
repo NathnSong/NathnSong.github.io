@@ -1,0 +1,19 @@
+---
+layout: page
+title: Search
+permalink: /search/
+---
+
+<div id="search-bar">
+  <input
+    id="search-input"
+    type="search"
+    placeholder="검색어를 입력하세요."
+    data-search-json="{{ '/search.json' | relative_url }}"
+    autofocus
+  />
+</div>
+<ul id="results-container"></ul>
+
+<script src="{{ '/assets/js/simple-jekyll-search.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/search-init.js' | relative_url }}"></script>
