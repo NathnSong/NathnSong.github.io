@@ -41,3 +41,10 @@
     document.querySelectorAll('.gumroad-button').forEach(el => io2.observe(el));
   });
 </script>
+
+<!-- 푸터의 Powered by Hydejack 문구 숨기기 -->
+<style>
+  footer small:has(a[href*="hydejack.com"]) {
+    display: none !important;
+  }
+</style>
