@@ -61,6 +61,10 @@ permalink:             /:categories/:year-:month-:day-:title/
 paginate:              10
 paginate_path:         /:num/
 
+# change apple touch icon.
+favicon:               /assets/img/profile.jpg
+apple-touch-icon:      /assets/img/profile.jpg
+
 
 # Theme
 # ---------------------------------------------------------------------------------------
